@@ -1,0 +1,2 @@
+[com.flink.logcenter.task.cron]
+# ContentLogTask.run=0 */2 * * *

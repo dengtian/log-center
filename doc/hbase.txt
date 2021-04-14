@@ -1,0 +1,32 @@
+//用户历史
+create 'user_history',{NAME => 'fileType', TTL=>'86400'},{NAME => 'label', TTL=>'86400'}
+
+//稿件
+create 'content','attr','label','author'
+
+//稿件关联表
+create 'content_relate','relate'
+
+//协同过滤关联表
+create 'item_coeff','relate'
+
+//稿件历史记录
+create 'content_user_history',{NAME => 'p', TTL=>'86400'}
+
+//用户历史记录
+create 'user_content_history',{NAME => 'p', TTL=>'86400'}
+
+
+//用户标签表
+create 'user_label','text_content','video','small_video','qa','fact','circle','task','user_type','product','shop','activity','service','program','ad','column','dept'
+
+
+//数据标签表  记录除稿件外其他类型的标签数据
+create 'data_labels','label','type'
+
+//用户标签关联表   记录用户对于各个类型的关联数据
+create 'user_relate','type','data'
+
+
+//用户行为记录表
+create 'user_log','data'
